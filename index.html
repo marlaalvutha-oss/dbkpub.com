@@ -96,8 +96,18 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
-            justify-items: center;
+            
         }
+        .card {
+    flex: 0 1 300px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(90, 111, 95, 0.2);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+        
 
         /* Card Styles */
         .card {
