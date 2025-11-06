@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The creative hub of Drathir Barra Ka'lum - explore fantasy worlds, handcrafted creations, KDP journals, and multi-creative projects spanning stories, art, and maker crafts.">
+    <title>Drathir Barra Ka'lum | Creative Hub</title>
+    <link rel="icon" type="image/png" href="DBK_SigilGreen.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-image: url('Hub_Back.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 40px;
+            margin-bottom: 60px;
+            background-image: url('HubBack2.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            border: 2px solid rgba(255,255,255,0.3);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.25);
+            border-radius: 8px;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hero-logo {
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(2px 2px 4px rgba(255,255,255,0.5));
+        }
+
+        .hero-tagline {
+            font-size: 1.2em;
+            color: #4a4a4a;
+            font-style: italic;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+            max-width: 700px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            font-size: 2em;
+            margin: 60px 0 20px 0;
+            color: #5a6f5f;
+            text-align: center;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+
+        .section-subheader {
+            font-size: 1.1em;
+            margin: 0 0 40px 0;
+            color: #7a8f7f;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .featured-header {
+            font-size: 1.5em;
+            color: #5a6f5f;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .browse-header {
+            font-size: 1.5em;
+            color: #5a6f5f;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(90, 111, 95, 0.3), transparent);
+            margin: 60px 0;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+            justify-items: center;
+        }
+
+        /* Card Styles */
+        .card {
+            background: rgba(255,255,255,0.85);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(90, 111, 95, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: rgba(255,255,255,0.9);
+            position: relative;
+        }
+
+        .card-sigil {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            opacity: 0.6;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+        }
+
+        /* Different themed cards */
+        .card-cvns .card-image {
+            background: linear-gradient(135deg, #6b8e7a 0%, #8ba3b5 50%, #9b7fad 100%);
+        }
+
+        .card-afterdark .card-image {
+            background: linear-gradient(135deg, #2a2a2a 0%, #8b0000 50%, #ff6b35 100%);
+        }
+
+        .card-aldaria .card-image {
+            background: linear-gradient(135deg, #3d2166 0%, #7b5a94 50%, #ad8fc5 100%);
+        }
+
+        .card-dungeon .card-image {
+            background: linear-gradient(135deg, #2a4a3e 0%, #9b8365 50%, #d4af37 100%);
+        }
+
+        .card-etsy .card-image {
+            background: linear-gradient(135deg, #8a7f8f 0%, #b0a5b6 100%);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #3a3a3a;
+        }
+
+        .card-description {
+            font-size: 0.95em;
+            color: #5a5a5a;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            display: inline-block;
+            padding: 10px 24px;
+            background: rgba(90, 111, 95, 0.7);
+            color: #f5f1e8;
+            text-decoration: none;
+            border-radius: 4px;
+            border: 1px solid rgba(90, 111, 95, 0.9);
+            transition: background 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .card-link:hover {
+            background: rgba(90, 111, 95, 0.9);
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .portfolio-item {
+            background: rgba(255,255,255,0.85);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(90, 111, 95, 0.2);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #6a7a7a 0%, #8a9a9a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 2em;
+        }
+
+        .portfolio-caption {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .portfolio-title {
+            color: #4a4a4a;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-size {
+            color: #7a7a7a;
+            font-size: 0.8em;
+            font-style: italic;
+        }
+
+        /* Featured Grid - Larger cards for bestsellers */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .featured-item {
+            background: rgba(255,255,255,0.9);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid rgba(90, 111, 95, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .featured-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 350px;
+            background: linear-gradient(135deg, #4a4a4a 0%, #7a7a7a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 3em;
+            position: relative;
+        }
+
+        .bestseller-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #d4af37;
+            color: #1a1a1a;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.3em;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .featured-caption {
+            padding: 20px;
+        }
+
+        .featured-title {
+            font-size: 1.3em;
+            color: #3a3a3a;
+            margin-bottom: 8px;
+        }
+
+        .featured-details {
+            font-size: 0.9em;
+            color: #6a6a6a;
+            margin-bottom: 12px;
+        }
+
+        .featured-link {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(90, 111, 95, 0.8);
+            color: #f5f1e8;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+
+        .featured-link:hover {
+            background: rgba(90, 111, 95, 1);
+        }
+
+        /* Category Pills */
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .category-pill {
+            padding: 10px 24px;
+            background: rgba(255,255,255,0.7);
+            border: 1px solid rgba(90, 111, 95, 0.4);
+            border-radius: 20px;
+            color: #3a3a3a;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .category-pill:hover {
+            background: rgba(255,255,255,0.9);
+            border-color: rgba(90, 111, 95, 0.7);
+        }
+
+        .category-pill.active {
+            background: rgba(90, 111, 95, 0.7);
+            border-color: rgba(90, 111, 95, 0.9);
+            color: #f5f1e8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #5a5a5a;
+            margin-top: 60px;
+            border-top: 2px solid rgba(90, 111, 95, 0.3);
+        }
+
+        .footer-sigil {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 20px;
+            opacity: 1;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero-logo {
+                max-width: 100%;
+            }
+
+            .hero-tagline {
+                font-size: 1em;
+            }
+
+            .section-header {
+                font-size: 1.5em;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-content">
+                <img src="DBK_Hub.png" alt="Drathir Barra Ka'lum Creative Hub" class="hero-logo">
+                <p class="hero-tagline">Where imagination meets creation across worlds, crafts, and stories</p>
+            </div>
+        </div>
+
+        <!-- Featured Projects Section -->
+        <h2 class="section-header">Featured Projects</h2>
+        <div class="card-grid">
+            <div class="card card-cvns">
+                <div class="card-image">
+                    🌿
+                    <img src="DBK_SigilGreen.png" alt="DBK Sigil" class="card-sigil">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Central Virginia Notary Services</h3>
+                    <p class="card-description">Professional notary and loan signing services for Central Virginia. Reliable, mobile, and experienced.</p>
+                    <a href="https://cvns.me" class="card-link">Visit Site →</a>
+                </div>
+            </div>
+
+            <div class="card card-afterdark">
+                <div class="card-image">
+                    🌙
+                    <img src="DBK_SigilGreen.png" alt="DBK Sigil" class="card-sigil">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">After Dark Chronicles</h3>
+                    <p class="card-description">Dark fantasy tales and haunting narratives that explore the shadows between worlds.</p>
+                    <a href="https://afterdarkchronicles.com" class="card-link">Visit Site →</a>
+                </div>
+            </div>
+
+            <div class="card card-etsy">
+                <div class="card-image">
+                    🛍️
+                    <img src="DBK_SigilGreen.png" alt="DBK Sigil" class="card-sigil">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">DBK Etsy Shop</h3>
+                    <p class="card-description">Handcrafted items, digital downloads, and unique creations available for purchase.</p>
+                    <a href="https://drathirbarrastudios.etsy.com" class="card-link">Shop Now →</a>
+                </div>
+            </div>
+
+            <div class="card card-dungeon">
+                <div class="card-image">
+                    🎲
+                    <img src="DBK_SigilGreen.png" alt="DBK Sigil" class="card-sigil">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Dungeon Delvers Inc.</h3>
+                    <p class="card-description">Fantasy adventure series following a ragtag group of professional dungeon explorers.</p>
+                    <a href="#" class="card-link">Coming Soon</a>
+                </div>
+            </div>
+
+            <div class="card card-aldaria">
+                <div class="card-image">
+                    ✨
+                    <img src="DBK_SigilGreen.png" alt="DBK Sigil" class="card-sigil">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">World of Aldaria</h3>
+                    <p class="card-description">An epic fantasy realm filled with magic, adventure, and unforgettable characters.</p>
+                    <a href="#" class="card-link">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- KDP Portfolio Section -->
+        <h2 class="section-header">KDP Journals & Planners</h2>
+        <p class="section-subheader">Professional-quality journals, planners, and logs available on Amazon</p>
+
+        <!-- Featured Bestsellers -->
+        <h3 class="featured-header">✨ Featured Bestsellers</h3>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <div class="featured-image">
+                    📖
+                    <span class="bestseller-badge">BESTSELLER</span>
+                </div>
+                <div class="featured-caption">
+                    <h4 class="featured-title">Demon Sigil Composition Book</h4>
+                    <p class="featured-details">7.5" x 9.25" | Softcover | 120 Pages</p>
+                    <a href="#" class="featured-link">View on Amazon →</a>
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-image">
+                    🔫
+                    <span class="bestseller-badge">BESTSELLER</span>
+                </div>
+                <div class="featured-caption">
+                    <h4 class="featured-title">Firearms Log Book</h4>
+                    <p class="featured-details">6" x 9" | Softcover | 120 Pages</p>
+                    <a href="#" class="featured-link">View on Amazon →</a>
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-image">
+                    ✨
+                    <span class="bestseller-badge">BESTSELLER</span>
+                </div>
+                <div class="featured-caption">
+                    <h4 class="featured-title">Vision Board Planner</h4>
+                    <p class="featured-details">8.5" x 11" | Softcover | 100 Pages</p>
+                    <a href="#" class="featured-link">View on Amazon →</a>
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-image">
+                    🧶
+                </div>
+                <div class="featured-caption">
+                    <h4 class="featured-title">Crochet Pattern Journal</h4>
+                    <p class="featured-details">6" x 9" | Multiple formats available</p>
+                    <a href="#" class="featured-link">View on Amazon →</a>
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-image">
+                    📋
+                </div>
+                <div class="featured-caption">
+                    <h4 class="featured-title">Virginia Notary Log Book</h4>
+                    <p class="featured-details">8.5" x 11" | Hard & Softcover</p>
+                    <a href="#" class="featured-link">View on Amazon →</a>
+                </div>
+            </div>
+
+            <div class="featured-item">
+                <div class="featured-image">
+                    👁️
+                </div>
+                <div class="featured-caption">
+                    <h4 class="featured-title">Demon Sigil Grimoire</h4>
+                    <p class="featured-details">8.5" x 11" | Hardcover | 250+ Pages</p>
+                    <a href="#" class="featured-link">View on Amazon →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Browse All Products -->
+        <h3 class="browse-header">Browse All Products</h3>
+        
+        <div class="category-filters">
+            <span class="category-pill active">All</span>
+            <span class="category-pill">Blank Lined Journals</span>
+            <span class="category-pill">Dot Grid Journals</span>
+            <span class="category-pill">Composition Books</span>
+            <span class="category-pill">Planners & Log Books</span>
+            <span class="category-pill">Specialty</span>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-image">📕</div>
+                <div class="portfolio-caption">
+                    <p class="portfolio-title">Demon Sigil - Bael</p>
+                    <p class="portfolio-size">7.5" x 9.25" | Softcover</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">🌙</div>
+                <div class="portfolio-caption">
+                    <p class="portfolio-title">Occult Lined Journal</p>
+                    <p class="portfolio-size">6" x 9" | Softcover</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">📓</div>
+                <div class="portfolio-caption">
+                    <p class="portfolio-title">Dot Grid Journal</p>
+                    <p class="portfolio-size">6" x 9" | Hardcover</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">🧵</div>
+                <div class="portfolio-caption">
+                    <p class="portfolio-title">Crochet Pattern - Large</p>
+                    <p class="portfolio-size">8.5" x 11" | Hardcover</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">⭐</div>
+                <div class="portfolio-caption">
+                    <p class="portfolio-title">Zodiac - Aries</p>
+                    <p class="portfolio-size">6" x 9" | Softcover</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">📋</div>
+                <div class="portfolio-caption">
+                    <p class="portfolio-title">Florida Notary Log</p>
+                    <p class="portfolio-size">8.5" x 11" | Softcover</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">📘</div>
+                <div class="portfolio-caption">
+                    <p class="portfolio-title">Blank Lined Journal</p>
+                    <p class="portfolio-size">6" x 9" | Softcover</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">📗</div>
+                <div class="portfolio-caption">
+                    <p class="portfolio-title">Demon Sigil - Paimon</p>
+                    <p class="portfolio-size">7.5" x 9.25" | Softcover</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Creative Portfolio Section -->
+        <h2 class="section-header">Creative Portfolio</h2>
+        <div class="category-filters">
+            <span class="category-pill active">All</span>
+            <span class="category-pill">Model Horses</span>
+            <span class="category-pill">Miniatures</span>
+            <span class="category-pill">Crochet</span>
+            <span class="category-pill">Art & Other</span>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-image">🐴</div>
+                <div class="portfolio-caption">Custom Painted Model Horse</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">🏠</div>
+                <div class="portfolio-caption">Fantasy Miniature Terrain</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">🧶</div>
+                <div class="portfolio-caption">Handmade Crochet Blanket</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">🎨</div>
+                <div class="portfolio-caption">Mixed Media Artwork</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">🐴</div>
+                <div class="portfolio-caption">Show Quality Model Horse</div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-image">⚔️</div>
+                <div class="portfolio-caption">D&D Character Miniature</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <img src="DBK_SigilGreen.png" alt="DBK Sigil" class="footer-sigil">
+            <p>© 2025 Drathir Barra Ka'lum | All creations lovingly made with passion and caffeine</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Contact | Social Media | Newsletter</p>
+        </footer>
+    </div>
+</body>
+</html>
