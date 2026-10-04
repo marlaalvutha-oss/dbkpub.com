@@ -340,6 +340,111 @@ nav a:hover {
     grid-column: 3;
 }
 
+        /* ========================================
+   WELCOME PROFILE
+======================================== */
+
+.profile-photo {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 32%;
+
+    margin: 2px auto 18px;
+
+    border: 3px solid #76502a;
+    outline: 1px solid #b48245;
+    outline-offset: 3px;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, .8),
+        0 0 12px rgba(151, 89, 35, .22);
+}
+
+.profile-name {
+    margin-top: 12px;
+
+    color: #e8c58f;
+
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 3px #000;
+}
+
+.profile-tagline {
+    margin: 10px auto 18px;
+
+    color: #cdb083;
+
+    font-size: .98rem;
+    line-height: 1.55;
+
+    text-align: center;
+}
+
+.profile-divider {
+    height: 1px;
+    margin: 18px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #85572b 20%,
+            #c18b4c 50%,
+            #85572b 80%,
+            transparent
+        );
+}
+
+.profile-details {
+    font-size: .94rem;
+}
+
+.profile-details > div {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 9px 3px;
+
+    color: #d5b98c;
+
+    border-bottom:
+        1px solid rgba(132, 87, 42, .28);
+
+    line-height: 1.35;
+}
+
+.profile-details > div:last-child {
+    border-bottom: none;
+}
+
+.profile-icon {
+    display: inline-block;
+    flex: 0 0 28px;
+
+    margin-right: 4px;
+
+    text-align: center;
+}
+
+.question-everything {
+    margin-top: 7px;
+
+    color: #e6bc78 !important;
+    font-weight: bold;
+    font-style: italic;
+
+    text-shadow:
+        0 1px 3px #000;
+}
 
 /* ========================================
    SPECIAL PANEL DETAILS
@@ -505,12 +610,7 @@ footer::before {
 
         <div class="grid">
 
-            <section class="panel about">
-                <h2>Welcome</h2>
-                <p>
-                    ABOUT ME
-                </p>
-            </section>
+         
 
 
             <section class="panel currently">
