@@ -854,7 +854,35 @@ footer::before {
         grid-column: auto;
     }
 }
-    </style>
+    
+/* ========================================
+   GUESTBOOK
+======================================== */
+
+.guestbook-intro {
+    margin: 2px 0 14px;
+    text-align: center;
+    font-style: italic;
+    color: #d7bd91;
+    line-height: 1.5;
+}
+
+.guestbook-frame {
+    width: 100%;
+    height: 420px;
+    border: 1px solid #8c5b2b;
+    box-sizing: border-box;
+    background: #100b08;
+}
+
+.guestbook-note {
+    margin: 12px 0 0;
+    text-align: center;
+    color: #9c7747;
+    font-size: .88rem;
+}
+
+</style>
 </head>
 
 <body>
@@ -1145,10 +1173,18 @@ footer::before {
 
             <section class="panel guestbook">
                 <h2>Guestbook</h2>
+                <p class="guestbook-intro">You found Brenda-Land. Leave proof you were here.</p>
 
-                <p>
-                    SIGN MY GUESTBOOK
-                </p>
+                <!-- UltraGuest guestbook -->
+                <iframe
+                    class="guestbook-frame"
+                    src="https://www.ultraguest.com/embed/4gvmtzm8"
+                    title="Brenda-Land Guestbook"
+                    loading="lazy"
+                    referrerpolicy="no-referrer">
+                </iframe>
+
+                <p class="guestbook-note">✒ Sign it. Read it. Question everything.</p>
             </section>
 
         </div>
