@@ -572,6 +572,57 @@ nav a:hover {
     font-weight: bold;
 }
 
+
+/* ========================================
+   BOOM BOX
+======================================== */
+
+.boombox-content { text-align: center; }
+
+.boombox-kicker {
+    margin: 2px 0 6px !important;
+    color: #e6bc78 !important;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.boombox-title {
+    margin: 0 0 15px !important;
+    color: #d7bd91 !important;
+    font-style: italic;
+}
+
+.youtube-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 16px auto 17px;
+    border: 3px solid #76502a;
+    outline: 1px solid #b48245;
+    outline-offset: 3px;
+    background: #000;
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, .8),
+        0 0 12px rgba(151, 89, 35, .22);
+}
+
+.youtube-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.boombox-note {
+    margin: 15px 0 0 !important;
+    padding-top: 14px;
+    border-top: 1px solid rgba(132, 87, 42, .28);
+    color: #cdb083 !important;
+    font-style: italic;
+    line-height: 1.55 !important;
+}
+
 /* ========================================
    FOOTER
 ======================================== */
@@ -691,7 +742,7 @@ footer::before {
         <a href="#">The Library</a>
         <a href="#">The Workshop</a>
         <a href="#">Curiosity Cabinet</a>
-        <a href="#">Music</a>
+        <a href="#">Boom Box</a>
         <a href="#">Gallery</a>
         <a href="#">Notice Board</a>
     </nav>
@@ -856,10 +907,25 @@ footer::before {
 
 
             <section class="panel music">
-                <h2>Music</h2>
-                <p>
-                    MUSIC PLAYER / PLAYLIST
-                </p>
+                <h2>Boom Box</h2>
+
+                <div class="boombox-content">
+                    <p class="boombox-kicker">🎵 Currently Spinning</p>
+                    <p class="boombox-title">World of Aldaria Writing Playlist</p>
+
+                    <div class="youtube-frame">
+                        <iframe
+                            src="https://www.youtube.com/embed/videoseries?list=PL4q6_dAESR6tYa81AMSGVvHBsL1BR3Oy_"
+                            title="World of Aldaria Writing Playlist"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <p class="boombox-note">
+                        Vibe music for disappearing into Aldaria and getting words on the page.
+                    </p>
+                </div>
             </section>
 
 
