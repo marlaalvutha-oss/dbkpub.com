@@ -447,6 +447,51 @@ nav a:hover {
 }
 
 /* ========================================
+   CURRENTLY
+======================================== */
+
+.current-list {
+    display: grid;
+    gap: 0;
+}
+
+.current-item {
+    padding: 13px 4px 14px;
+    border-bottom: 1px solid rgba(132, 87, 42, .28);
+}
+
+.current-item:last-child {
+    border-bottom: none;
+}
+
+.current-label {
+    color: #e6bc78;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.current-answer {
+    color: #d7bd91;
+    line-height: 1.5;
+    padding-left: 30px;
+}
+
+.reading-list {
+    margin-top: 7px;
+    padding-left: 30px;
+}
+
+.reading-list div {
+    margin: 6px 0;
+    color: #d7bd91;
+    line-height: 1.45;
+}
+
+.reading-list strong {
+    color: #c99b5e;
+}
+
+/* ========================================
    SPECIAL PANEL DETAILS
 ======================================== */
 
@@ -668,17 +713,63 @@ footer::before {
                     </div>
                 </div>
             </section>
-
-
             <section class="panel currently">
                 <h2>Currently...</h2>
 
-                <p>🎨 On the painting table:</p>
-                <p>✍️ Writing:</p>
-                <p>📖 Reading:</p>
-                <p>🎵 Listening to:</p>
-                <p>🎲 Current obsession:</p>
-                <p>☕ Fuel:</p>
+                <div class="current-list">
+
+                    <div class="current-item">
+                        <div class="current-label">🔨 On the Workbench</div>
+                        <div class="current-answer">
+                            Verdigris Appy • Bouncer/Nightmare • Twister/Squashling Pony
+                        </div>
+                    </div>
+
+                    <div class="current-item">
+                        <div class="current-label">✍️ Writing</div>
+                        <div class="current-answer">
+                            World of Aldaria
+                        </div>
+                    </div>
+
+                    <div class="current-item">
+                        <div class="current-label">📚 Reading</div>
+                        <div class="reading-list">
+                            <div><strong>🏠 At Home:</strong> <em>Zombie Fallout</em> — Mark Tufo</div>
+                            <div><strong>🚗 Travel:</strong> <em>Killing Floor</em> — Lee Child</div>
+                            <div><strong>✏️ Annotating:</strong> <em>Gone with the Wind</em> — Margaret Mitchell</div>
+                        </div>
+                    </div>
+
+                    <div class="current-item">
+                        <div class="current-label">🎵 Listening To</div>
+                        <div class="current-answer">
+                            World of Aldaria Playlist
+                        </div>
+                    </div>
+
+                    <div class="current-item">
+                        <div class="current-label">🎲 Current Obsession</div>
+                        <div class="current-answer">
+                            Building this damn website
+                        </div>
+                    </div>
+
+                    <div class="current-item">
+                        <div class="current-label">🛸 Rabbit Hole</div>
+                        <div class="current-answer">
+                            911 Dispatch
+                        </div>
+                    </div>
+
+                    <div class="current-item">
+                        <div class="current-label">☕ Fuel</div>
+                        <div class="current-answer">
+                            Coffee
+                        </div>
+                    </div>
+
+                </div>
             </section>
 
 
