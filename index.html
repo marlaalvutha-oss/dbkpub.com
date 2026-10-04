@@ -40,6 +40,49 @@ body {
 
 
 
+
+/* ========================================
+   FEATURED PROJECTS
+======================================== */
+
+.project-card {
+    padding: 15px 3px 17px;
+    border-bottom: 1px solid rgba(132, 87, 42, .28);
+}
+
+.project-card:first-of-type {
+    padding-top: 2px;
+}
+
+.project-card:last-child {
+    border-bottom: none;
+    padding-bottom: 2px;
+}
+
+.project-card h3 {
+    margin: 0 0 8px;
+    color: #e8c58f;
+    font-size: 1.15rem;
+}
+
+.project-card p {
+    margin: 0 0 10px;
+    color: #d7bd91;
+    line-height: 1.55;
+}
+
+.project-link {
+    color: #e6bc78;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(230, 188, 120, .45);
+}
+
+.project-link:hover {
+    color: #fff1c7;
+    border-bottom-color: #fff1c7;
+}
+
 /* ========================================
    BRENDA-LAND JOURNAL
 ======================================== */
@@ -1055,17 +1098,39 @@ footer::before {
             <section class="panel projects">
                 <h2>Featured Projects</h2>
 
-                <p>
-                    WORLD OF ALDARIA
-                </p>
+                <div class="project-card">
+                    <h3>📖 World of Aldaria</h3>
+                    <p>
+                        Fantasy novels, dragons, questionable decisions, and an adventuring party
+                        that really should not be trusted unsupervised.
+                    </p>
+                    <a class="project-link"
+                       href="https://worldofaldaria.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">→ Enter Aldaria</a>
+                </div>
 
-                <p>
-                    AFTER DARK CHRONICLES
-                </p>
+                <div class="project-card">
+                    <h3>🌙 After Dark Chronicles</h3>
+                    <p>
+                        Late-night paranormal radio host Georgia Bell is pulled into a murder
+                        investigation where the monsters she talks about on air turn out to be
+                        terrifyingly real.
+                    </p>
+                    <a class="project-link"
+                       href="https://afterdarkchronicles.com/"
+                       target="_blank"
+                       rel="noopener noreferrer">→ Enter After Dark</a>
+                </div>
 
-                <p>
-                    CRAFTS & MINIATURES
-                </p>
+                <div class="project-card">
+                    <h3>🎨 The Workshop</h3>
+                    <p>
+                        Model horses, miniatures, crochet, paint, glue, experiments, and whatever
+                        the hell I'm making this week.
+                    </p>
+                    <a class="project-link" href="#">→ See What's on the Workbench</a>
+                </div>
             </section>
 
 
