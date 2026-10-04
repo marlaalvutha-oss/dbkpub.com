@@ -592,26 +592,70 @@ nav a:hover {
     font-style: italic;
 }
 
-.youtube-frame {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    margin: 16px auto 17px;
+.cassette-deck {
+    margin: 17px auto 18px;
+    padding: 18px 15px 16px;
     border: 3px solid #76502a;
     outline: 1px solid #b48245;
     outline-offset: 3px;
-    background: #000;
+    background:
+        linear-gradient(180deg, #21170f 0%, #0d0907 100%);
     box-shadow:
-        0 8px 18px rgba(0, 0, 0, .8),
-        0 0 12px rgba(151, 89, 35, .22);
+        inset 0 0 18px rgba(0,0,0,.8),
+        0 8px 18px rgba(0,0,0,.8),
+        0 0 12px rgba(151,89,35,.22);
 }
 
-.youtube-frame iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+.cassette-window {
+    position: relative;
+    margin: 0 auto 15px;
+    padding: 16px 10px;
+    border: 2px solid #60401f;
+    background: #090705;
+    box-shadow: inset 0 0 14px rgba(0,0,0,.95);
+}
+
+.cassette-reels {
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+    margin-bottom: 10px;
+}
+
+.cassette-reel {
+    width: 46px;
+    height: 46px;
+    border: 5px double #a8763c;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 6px #17100b;
+}
+
+.cassette-label {
+    color: #c99b5e;
+    font-size: .82rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.playlist-button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #21150d;
+    background: linear-gradient(180deg, #d7b77f, #a97b42);
+    border: 1px solid #e0c18b;
+    outline: 1px solid #65421f;
+    outline-offset: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,.65);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.playlist-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.75),
+        0 0 10px rgba(190,132,64,.3);
 }
 
 .boombox-note {
@@ -913,13 +957,21 @@ footer::before {
                     <p class="boombox-kicker">🎵 Currently Spinning</p>
                     <p class="boombox-title">World of Aldaria Writing Playlist</p>
 
-                    <div class="youtube-frame">
-                        <iframe
-                            src="https://www.youtube.com/embed/videoseries?list=PL4q6_dAESR6tYa81AMSGVvHBsL1BR3Oy_"
-                            title="World of Aldaria Writing Playlist"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
+                    <div class="cassette-deck">
+                        <div class="cassette-window">
+                            <div class="cassette-reels">
+                                <span class="cassette-reel"></span>
+                                <span class="cassette-reel"></span>
+                            </div>
+                            <div class="cassette-label">Aldaria Writing Mix</div>
+                        </div>
+
+                        <a class="playlist-button"
+                           href="https://www.youtube.com/playlist?list=PL4q6_dAESR6tYa81AMSGVvHBsL1BR3Oy_"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            ▶ Play on YouTube
+                        </a>
                     </div>
 
                     <p class="boombox-note">
