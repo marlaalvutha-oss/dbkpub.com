@@ -1,1 +1,114 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brenda-Land | Brenda's Corner of the Internet</title>
+    <style>
+        * { box-sizing: border-box; }
+        :root {
+            --black:#090705; --deep-brown:#130d09; --wood:#24160d;
+            --copper:#8c5b2b; --brass:#b78343; --gold:#d4a45f;
+            --parchment:#d2b17b; --cream:#ecd3a4;
+        }
+        body {
+            margin:0;
+            background:radial-gradient(circle at 50% 0%, #26180e 0%, #120c08 45%, #080604 100%);
+            color:var(--cream);
+            font-family:Georgia, "Times New Roman", serif;
+        }
+        header { background:#000; }
+        .banner { width:100%; height:auto; display:block; }
+        nav {
+            background:linear-gradient(180deg,#382315 0%,#1c110a 18%,#120c08 80%,#2d1c10 100%);
+            border-top:3px solid #6d431f; border-bottom:3px solid #6d431f;
+            padding:14px 20px; text-align:center;
+        }
+        nav a {
+            display:inline-block; color:#e8c58f; text-decoration:none;
+            padding:10px 16px; margin:4px 2px;
+            background:linear-gradient(180deg,#352216,#1b110b);
+            border:1px solid #8d6132;
+        }
+        nav a:hover { color:#fff1c7; background:linear-gradient(180deg,#54351d,#28170d); }
+        .page { max-width:950px; margin:32px auto; padding:0 22px 40px; }
+        .panel {
+            position:relative;
+            background:radial-gradient(circle at top left,rgba(106,70,36,.20),transparent 45%),
+                       linear-gradient(135deg,#1e150f 0%,#130e0a 55%,#1a110b 100%);
+            border:2px solid #69441f; outline:1px solid #2c1a0d; outline-offset:4px;
+            padding:34px;
+            box-shadow:0 10px 25px rgba(0,0,0,.65), inset 0 0 30px rgba(0,0,0,.55);
+        }
+        .panel h1 {
+            margin:-34px -34px 26px; padding:14px 25px 13px;
+            color:#2b190c; font-size:1.7rem;
+            background:linear-gradient(90deg,#9f7746 0%,#d2b17b 15%,#c6a36e 50%,#d0ae77 85%,#8e683e 100%);
+            border-bottom:2px solid #67421f;
+        }
+        .date { color:#b98a50; text-transform:uppercase; letter-spacing:.6px; font-size:.9rem; }
+        article h2 { color:#e8c58f; font-size:2rem; font-style:italic; margin:8px 0 24px; }
+        article p { color:#d7bd91; line-height:1.8; font-size:1.05rem; }
+        article strong { color:#e6bc78; }
+        article em { color:#e2c398; }
+        .back {
+            display:inline-block; margin-top:25px; padding-top:18px;
+            border-top:1px solid rgba(132,87,42,.35);
+            color:#e6bc78; text-decoration:none; font-weight:bold;
+        }
+        footer {
+            margin-top:35px; padding:38px 20px; text-align:center;
+            color:#c49450; font-style:italic; border-top:2px solid #5e3d1d;
+            background:linear-gradient(180deg,#100b07,#060504);
+        }
+        @media (max-width:700px) {
+            nav { padding:10px 6px; }
+            nav a { padding:8px 10px; font-size:.9rem; }
+            .page { padding:0 14px 30px; }
+            .panel { padding:24px; }
+            .panel h1 { margin:-24px -24px 24px; }
+            article h2 { font-size:1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<header><img src="banner.png" alt="Brenda's personal website banner" class="banner"></header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="brenda-land.html">The Journal</a>
+    <a href="#">The Library</a>
+    <a href="#">The Workshop</a>
+    <a href="#">Curiosity Cabinet</a>
+    <a href="#">Boom Box</a>
+    <a href="#">Gallery</a>
+    <a href="#">Notice Board</a>
+</nav>
+<main class="page">
+    <section class="panel">
+        <h1>What's Happening in Brenda-Land?</h1>
+        <article>
+            <div class="date">October 4, 2026</div>
+            <h2>Building Websites Is Bullshit</h2>
+            <p>Apparently, I build websites now.</p>
+            <p>This was not on the schedule.</p>
+            <p>It started because the World of Aldaria website desperately needed some attention. And by “some attention,” I mean it was basically a picture of M&M with a big <strong>COMING SOON</strong> sign slapped on it. Which was fine when “soon” meant <em>eventually</em>. It became considerably less fine when we actually had things worth showing people.</p>
+            <p>So Jim and I did what any reasonable people would do and turned a simple website update into a <strong>HUGE FUCKING PROJECT</strong>.</p>
+            <p>And you know what? It looks fucking amazing now.</p>
+            <p>Naturally, that should have been enough.</p>
+            <p>It was not.</p>
+            <p>Because once I finished staring proudly at the shiny new World of Aldaria site, some deeply defective part of my brain whispered:</p>
+            <p><em>You know what else needs a website?</em></p>
+            <p>Me.</p>
+            <p>And that is how we got here.</p>
+            <p>Welcome to Brenda-Land, where today's adventures have included HTML, CSS, fighting with images, a fictional mostly-toothless dog named Spud, and discovering that YouTube apparently doesn't want me embedding my own damn writing playlist.</p>
+            <p>So now my website has a cassette player.</p>
+            <p>Because I'm Gen X and spite is a perfectly legitimate design philosophy.</p>
+            <p>At this point I'm not entirely sure whether I'm building a personal website or slowly reconstructing the internet circa 1998, except prettier and with fewer dancing babies.</p>
+            <p>Either way, I kind of fucking love it.</p>
+            <a class="back" href="index.html">← Back to Brenda's Corner</a>
+        </article>
+    </section>
+</main>
+<footer>Not all who wander are lost. Some are just on a side quest.</footer>
+</body>
+</html>

@@ -39,6 +39,53 @@ body {
 }
 
 
+
+/* ========================================
+   BRENDA-LAND JOURNAL
+======================================== */
+
+.journal-date {
+    color: #b98a50;
+    font-size: .9rem;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.journal-title {
+    margin: 0 0 14px;
+    color: #e8c58f;
+    font-size: 1.55rem;
+    font-style: italic;
+}
+
+.journal-excerpt {
+    color: #d7bd91;
+    line-height: 1.7;
+}
+
+.journal-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #e6bc78;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(230,188,120,.45);
+}
+
+.journal-link:hover {
+    color: #fff1c7;
+    border-bottom-color: #fff1c7;
+}
+
+.journal-bottom {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(132,87,42,.28);
+    text-align: center;
+}
+
+
 /* ========================================
    BANNER
 ======================================== */
@@ -782,7 +829,7 @@ footer::before {
 
     <nav>
         <a href="#">Home</a>
-        <a href="#">The Journal</a>
+        <a href="brenda-land.html">The Journal</a>
         <a href="#">The Library</a>
         <a href="#">The Workshop</a>
         <a href="#">Curiosity Cabinet</a>
@@ -982,11 +1029,26 @@ footer::before {
 
 
             <section class="panel journal">
-                <h2>Latest From the Journal</h2>
+                <h2>What's Happening in Brenda-Land?</h2>
 
-                <p>
-                    JOURNAL POSTS GO HERE
-                </p>
+                <div class="journal-date">October 4, 2026</div>
+                <h3 class="journal-title">Building Websites Is Bullshit</h3>
+
+                <div class="journal-excerpt">
+                    <p>Apparently, I build websites now.</p>
+                    <p>This was not on the schedule.</p>
+                    <p>
+                        It started because the World of Aldaria website desperately needed some attention.
+                        And by “some attention,” I mean it was basically a picture of M&amp;M with a big
+                        <strong>COMING SOON</strong> sign slapped on it...
+                    </p>
+                </div>
+
+                <a class="journal-link" href="brenda-land.html">→ Keep Reading</a>
+
+                <div class="journal-bottom">
+                    <a class="journal-link" href="brenda-land.html">→ More From Brenda-Land</a>
+                </div>
             </section>
 
 
