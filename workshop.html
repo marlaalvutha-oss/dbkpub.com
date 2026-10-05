@@ -988,6 +988,58 @@ footer::before {
         grid-template-columns: 1fr;
     }
 }
+
+/* ========================================
+   WORKSHOP WIP PHOTOS
+======================================== */
+.wip-photos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 12px 0 10px;
+}
+
+.wip-photos.single {
+    grid-template-columns: 1fr;
+}
+
+.wip-photo {
+    margin: 0;
+    padding: 6px;
+    border: 1px solid #8c5b2b;
+    background: #0d0907;
+}
+
+.wip-photo img {
+    width: 100%;
+    height: 260px;
+    display: block;
+    object-fit: cover;
+}
+
+.wip-photo figcaption {
+    padding: 7px 4px 2px;
+    color: #b98a50;
+    text-align: center;
+    font-size: .88rem;
+    font-style: italic;
+}
+
+.workshop-status {
+    color: #c99b5e !important;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .wip-photos {
+        grid-template-columns: 1fr;
+    }
+
+    .wip-photo img {
+        height: auto;
+    }
+}
+
 </style>
 </head>
 <body>
@@ -1024,18 +1076,53 @@ footer::before {
             <h2>🐎 On the Painting Table</h2>
 
             <div class="workshop-item">
-                <h3>Verdigris Appy Bouncer</h3>
-                <p>Currently occupying valuable table space and demanding attention.</p>
+                <h3>Beautifully Corrupted</h3>
+                <div class="wip-photos">
+                    <figure class="wip-photo">
+                        <img src="beautifully-corrupted.jpg" alt="Beautifully Corrupted custom model horse work in progress">
+                        <figcaption>Patina, copper, and an unreasonable number of tiny details.</figcaption>
+                    </figure>
+                    <figure class="wip-photo">
+                        <img src="beautifully-corrupted-2.jpg" alt="Opposite side of Beautifully Corrupted custom model horse">
+                        <figcaption>Because apparently one side wasn't enough.</figcaption>
+                    </figure>
+                </div>
+                <p>A verdigris-inspired Appaloosa experiment with copper tones and hand-detailed mottling.</p>
+                <p class="workshop-status">Current status: Beautifully corrupted and still causing trouble.</p>
             </div>
 
             <div class="workshop-item">
-                <h3>Nightmare — SM Twister</h3>
-                <p>Because apparently a normal horse was never an option.</p>
+                <h3>Seraph's Holy Fire</h3>
+                <div class="wip-photos single">
+                    <figure class="wip-photo">
+                        <img src="seraphs-holy-fire.jpg" alt="Seraph's Holy Fire celestial Nightmare model horse work in progress">
+                        <figcaption>The aggressively yellow “trust the process” phase.</figcaption>
+                    </figure>
+                </div>
+                <p>A celestial counterpart to Nightmare, headed toward a dark finish with heat-tempered metal effects on the horn, hooves, and possibly the mane and tail.</p>
+                <p class="workshop-status">Current status: Holy fire pending.</p>
             </div>
 
             <div class="workshop-item">
-                <h3>Squashling — SM Pony</h3>
-                <p>Tiny seasonal vegetable-adjacent chaos in progress.</p>
+                <h3>Squashling</h3>
+                <div class="wip-photos single">
+                    <figure class="wip-photo">
+                        <img src="squashling.jpg" alt="Squashling orange and green model pony work in progress">
+                        <figcaption>Tiny vegetable-adjacent chaos.</figcaption>
+                    </figure>
+                </div>
+                <p>Small, orange, green, and becoming increasingly suspicious.</p>
+            </div>
+
+            <div class="workshop-item">
+                <h3>King Scrappy</h3>
+                <div class="wip-photos single">
+                    <figure class="wip-photo">
+                        <img src="king-scrappy.jpg" alt="King Scrappy model horse work in progress">
+                        <figcaption>Royal title. Workbench accommodations.</figcaption>
+                    </figure>
+                </div>
+                <p>Another resident of the painting table awaiting further crimes with paint.</p>
             </div>
         </section>
 
@@ -1043,9 +1130,15 @@ footer::before {
             <h2>🧶 On the Hook</h2>
 
             <div class="workshop-item">
-                <h3>The Giant Blanket</h3>
-                <p>One row takes approximately forever. Progress is measured in determination
-                and questionable life choices.</p>
+                <h3>The King-Size Scrap-ghan</h3>
+                <div class="wip-photos single">
+                    <figure class="wip-photo">
+                        <img src="workshop-scrap-ghan.jpg" alt="Large colorful king-size scrap-ghan work in progress">
+                        <figcaption>Every stripe has a past life.</figcaption>
+                    </figure>
+                </div>
+                <p>No pattern. No color plan. Just leftover yarn, one row at a time, until it fits a king-size bed or I die trying.</p>
+                <p class="workshop-status">Current status: Large enough to be inconvenient. Not large enough to be finished.</p>
             </div>
 
             <p class="workshop-note">Yarn has never respected boundaries.</p>
