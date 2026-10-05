@@ -882,6 +882,24 @@ footer::before {
     font-size: .88rem;
 }
 
+
+/* ========================================
+   GALLERY PREVIEW
+======================================== */
+.gallery-intro { margin:2px 0 14px; color:#d7bd91; letter-spacing:.04em; font-size:.92rem; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:0 0 14px; }
+.gallery-thumb { display:block; aspect-ratio:4/3; overflow:hidden; border:1px solid #8c5b2b; background:#090705; }
+.gallery-thumb img { width:100%; height:100%; display:block; object-fit:cover; transition:transform .25s ease,opacity .25s ease; }
+.gallery-thumb:hover img { transform:scale(1.035); opacity:.9; }
+.gallery-thumb:nth-child(2), .gallery-thumb:nth-child(5) { transform:translateY(5px); }
+.gallery-footer { text-align:center; margin-top:12px; }
+.gallery-link { color:#e6bc78; font-weight:bold; text-decoration:none; border-bottom:1px solid rgba(230,188,120,.45); }
+.gallery-link:hover { color:#fff1c7; border-bottom-color:#fff1c7; }
+@media (max-width:700px) {
+  .gallery-grid { grid-template-columns:repeat(2,1fr); }
+  .gallery-thumb:nth-child(2), .gallery-thumb:nth-child(5) { transform:none; }
+}
+
 </style>
 </head>
 
@@ -1164,10 +1182,16 @@ footer::before {
 
             <section class="panel gallery">
                 <h2>Gallery</h2>
-
-                <p>
-                    ART • MINIATURES • PHOTOS • RANDOMNESS
-                </p>
+                <p class="gallery-intro">ART • MODEL HORSES • MINIATURES • CROCHET • PHOTOS • RANDOMNESS</p>
+                <div class="gallery-grid">
+                    <a class="gallery-thumb" href="gallery.html" title="Sir Cabela"><img src="gallery-sir-cabella.jpg" alt="Painted miniature known as Sir Cabela"></a>
+                    <a class="gallery-thumb" href="gallery.html" title="Nightmare"><img src="gallery-nightmare.jpg" alt="Custom-painted model horse Nightmare"></a>
+                    <a class="gallery-thumb" href="gallery.html" title="Candy Corn"><img src="gallery-candy-corn.jpg" alt="Crocheted dragon Candy Corn"></a>
+                    <a class="gallery-thumb" href="gallery.html" title="Maryland"><img src="gallery-maryland.jpg" alt="Maryland-themed goat riding a blue crab"></a>
+                    <a class="gallery-thumb" href="gallery.html" title="Big Boi"><img src="gallery-big-boi.jpg" alt="Brenda reaching up to a large horse sculpture"></a>
+                    <a class="gallery-thumb" href="gallery.html" title="Winnie"><img src="gallery-winnie.jpg" alt="Winnie the orange cat stretched out on furniture"></a>
+                </div>
+                <div class="gallery-footer"><a class="gallery-link" href="gallery.html">→ Wander Through the Gallery</a></div>
             </section>
 
 
