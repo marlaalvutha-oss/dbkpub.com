@@ -1,1 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Workshop | Brenda's Corner of the Internet</title>
+    <style>
+      * {
+    box-sizing: border-box;
+}
 
+:root {
+    --black: #090705;
+    --deep-brown: #130d09;
+    --wood: #24160d;
+    --wood-light: #3a2515;
+    --copper: #8c5b2b;
+    --brass: #b78343;
+    --gold: #d4a45f;
+    --parchment: #d2b17b;
+    --parchment-dark: #9c7747;
+    --ink: #21150d;
+    --cream: #ecd3a4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 50% 0%, #26180e 0%, #120c08 45%, #080604 100%);
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+
+
+
+/* ========================================
+   FEATURED PROJECTS
+======================================== */
+
+.project-card {
+    padding: 15px 3px 17px;
+    border-bottom: 1px solid rgba(132, 87, 42, .28);
+}
+
+.project-card:first-of-type {
+    padding-top: 2px;
+}
+
+.project-card:last-child {
+    border-bottom: none;
+    padding-bottom: 2px;
+}
+
+.project-card h3 {
+    margin: 0 0 8px;
+    color: #e8c58f;
+    font-size: 1.15rem;
+}
+
+.project-card p {
+    margin: 0 0 10px;
+    color: #d7bd91;
+    line-height: 1.55;
+}
+
+.project-link {
+    color: #e6bc78;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(230, 188, 120, .45);
+}
+
+.project-link:hover {
+    color: #fff1c7;
+    border-bottom-color: #fff1c7;
+}
+
+/* ========================================
+   BRENDA-LAND JOURNAL
+======================================== */
+
+.journal-date {
+    color: #b98a50;
+    font-size: .9rem;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.journal-title {
+    margin: 0 0 14px;
+    color: #e8c58f;
+    font-size: 1.55rem;
+    font-style: italic;
+}
+
+.journal-excerpt {
+    color: #d7bd91;
+    line-height: 1.7;
+}
+
+.journal-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #e6bc78;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(230,188,120,.45);
+}
+
+.journal-link:hover {
+    color: #fff1c7;
+    border-bottom-color: #fff1c7;
+}
+
+.journal-bottom {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(132,87,42,.28);
+    text-align: center;
+}
+
+
+/* ========================================
+   BANNER
+======================================== */
+
+header {
+    background: #000;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+nav {
+    position: relative;
+    background:
+        linear-gradient(
+            180deg,
+            #382315 0%,
+            #1c110a 18%,
+            #120c08 80%,
+            #2d1c10 100%
+        );
+    border-top: 3px solid #6d431f;
+    border-bottom: 3px solid #6d431f;
+    padding: 14px 20px;
+    text-align: center;
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, .8),
+        inset 0 1px 0 rgba(255, 205, 130, .18);
+}
+
+nav::before,
+nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #b47a37;
+    opacity: .45;
+}
+
+nav::before {
+    top: 4px;
+}
+
+nav::after {
+    bottom: 4px;
+}
+
+nav a {
+    display: inline-block;
+    position: relative;
+    color: #e8c58f;
+    text-decoration: none;
+    padding: 10px 16px;
+    margin: 4px 2px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #352216,
+            #1b110b
+        );
+
+    border: 1px solid #8d6132;
+    border-radius: 2px;
+
+    box-shadow:
+        inset 0 0 8px rgba(0, 0, 0, .65),
+        0 2px 3px rgba(0, 0, 0, .7);
+
+    text-shadow:
+        0 1px 2px #000;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+nav a:hover {
+    color: #fff1c7;
+    background:
+        linear-gradient(
+            180deg,
+            #54351d,
+            #28170d
+        );
+
+    border-color: #c58a43;
+
+    box-shadow:
+        inset 0 0 10px rgba(226, 164, 83, .12),
+        0 0 8px rgba(181, 118, 49, .35);
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   MAIN PAGE
+======================================== */
+
+.page {
+    max-width: 1450px;
+    margin: 30px auto;
+    padding: 0 25px 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+
+/* ========================================
+   PANELS
+======================================== */
+
+.panel {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(106, 70, 36, .20),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #1e150f 0%,
+            #130e0a 55%,
+            #1a110b 100%
+        );
+
+    border: 2px solid #69441f;
+    outline: 1px solid #2c1a0d;
+    outline-offset: 4px;
+
+    padding: 24px;
+    min-height: 200px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .65),
+        inset 0 0 30px rgba(0, 0, 0, .55),
+        inset 0 1px 0 rgba(255, 205, 139, .10);
+}
+
+
+/* little decorative corner marks */
+
+.panel::before,
+.panel::after {
+    content: "✦";
+    position: absolute;
+    color: #9a6833;
+    font-size: 15px;
+    opacity: .8;
+}
+
+.panel::before {
+    top: 7px;
+    left: 9px;
+}
+
+.panel::after {
+    bottom: 7px;
+    right: 9px;
+}
+
+
+/* ========================================
+   PANEL HEADINGS
+======================================== */
+
+.panel h2 {
+    position: relative;
+
+    margin:
+        -24px
+        -24px
+        20px;
+
+    padding:
+        13px
+        22px
+        12px;
+
+    color: #2b190c;
+
+    font-size: 1.55rem;
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            90deg,
+            #9f7746 0%,
+            #d2b17b 15%,
+            #c6a36e 50%,
+            #d0ae77 85%,
+            #8e683e 100%
+        );
+
+    border-bottom:
+        2px solid #67421f;
+
+    text-shadow:
+        0 1px rgba(255,255,255,.25);
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.6);
+}
+
+
+/* imperfect parchment edge illusion */
+
+.panel h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 100%;
+    height: 6px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 8px,
+            rgba(42, 24, 10, .35) 9px,
+            transparent 11px
+        );
+
+    opacity: .5;
+}
+
+
+/* ========================================
+   TEXT
+======================================== */
+
+.panel p {
+    line-height: 1.65;
+    color: #d7bd91;
+}
+
+.currently p {
+    margin: 11px 0;
+}
+
+
+/* ========================================
+   INDIVIDUAL GRID AREAS
+======================================== */
+
+.about {
+    grid-column: 1;
+}
+
+.currently {
+    grid-column: 2;
+}
+
+.spud {
+    grid-column: 3;
+}
+
+.music {
+    grid-column: 1;
+}
+
+.journal {
+    grid-column: 2;
+    min-height: 370px;
+}
+
+.projects {
+    grid-column: 3;
+}
+
+.gallery {
+    grid-column: 1 / 3;
+}
+
+.guestbook {
+    grid-column: 3;
+}
+
+        /* ========================================
+   WELCOME PROFILE
+======================================== */
+
+.profile-photo {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 32%;
+
+    margin: 2px auto 18px;
+
+    border: 3px solid #76502a;
+    outline: 1px solid #b48245;
+    outline-offset: 3px;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, .8),
+        0 0 12px rgba(151, 89, 35, .22);
+}
+
+.profile-name {
+    margin-top: 12px;
+
+    color: #e8c58f;
+
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+
+    text-align: center;
+
+    text-shadow:
+        0 2px 3px #000;
+}
+
+.profile-tagline {
+    margin: 10px auto 18px;
+
+    color: #cdb083;
+
+    font-size: .98rem;
+    line-height: 1.55;
+
+    text-align: center;
+}
+
+.profile-divider {
+    height: 1px;
+    margin: 18px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #85572b 20%,
+            #c18b4c 50%,
+            #85572b 80%,
+            transparent
+        );
+}
+
+.profile-details {
+    font-size: .94rem;
+}
+
+.profile-details > div {
+    display: flex;
+    align-items: flex-start;
+
+    padding: 9px 3px;
+
+    color: #d5b98c;
+
+    border-bottom:
+        1px solid rgba(132, 87, 42, .28);
+
+    line-height: 1.35;
+}
+
+.profile-details > div:last-child {
+    border-bottom: none;
+}
+
+.profile-icon {
+    display: inline-block;
+    flex: 0 0 28px;
+
+    margin-right: 4px;
+
+    text-align: center;
+}
+
+.question-everything {
+    margin-top: 7px;
+
+    color: #e6bc78 !important;
+    font-weight: bold;
+    font-style: italic;
+
+    text-shadow:
+        0 1px 3px #000;
+}
+
+/* ========================================
+   CURRENTLY
+======================================== */
+
+.current-list {
+    display: grid;
+    gap: 0;
+}
+
+.current-item {
+    padding: 13px 4px 14px;
+    border-bottom: 1px solid rgba(132, 87, 42, .28);
+}
+
+.current-item:last-child {
+    border-bottom: none;
+}
+
+.current-label {
+    color: #e6bc78;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.current-answer {
+    color: #d7bd91;
+    line-height: 1.5;
+    padding-left: 30px;
+}
+
+.reading-list {
+    margin-top: 7px;
+    padding-left: 30px;
+}
+
+.reading-list div {
+    margin: 6px 0;
+    color: #d7bd91;
+    line-height: 1.45;
+}
+
+.reading-list strong {
+    color: #c99b5e;
+}
+
+/* ========================================
+   SPECIAL PANEL DETAILS
+======================================== */
+
+.currently {
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(91, 61, 31, .22),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #1e150f,
+            #110c08
+        );
+}
+
+.journal {
+    border-color: #7b5127;
+}
+
+.guestbook {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(113, 77, 40, .20),
+            transparent 65%
+        ),
+        #15100c;
+}
+
+
+
+/* ========================================
+   SPUD
+======================================== */
+
+.spud-content {
+    text-align: center;
+}
+
+.spud-photo {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 2px auto 18px;
+
+    border: 3px solid #76502a;
+    outline: 1px solid #b48245;
+    outline-offset: 3px;
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, .8),
+        0 0 12px rgba(151, 89, 35, .22);
+}
+
+.spud-content h3 {
+    margin: 12px 0 10px;
+    color: #e8c58f;
+    font-size: 1.2rem;
+}
+
+.spud-name {
+    color: #d7bd91;
+    line-height: 1.45;
+}
+
+.spud-name strong {
+    color: #e6bc78;
+}
+
+.spud-motto {
+    margin-top: 18px !important;
+    padding-top: 14px;
+    border-top: 1px solid rgba(132, 87, 42, .28);
+    color: #e6bc78 !important;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   BOOM BOX
+======================================== */
+
+.boombox-content { text-align: center; }
+
+.boombox-kicker {
+    margin: 2px 0 6px !important;
+    color: #e6bc78 !important;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.boombox-title {
+    margin: 0 0 15px !important;
+    color: #d7bd91 !important;
+    font-style: italic;
+}
+
+.cassette-deck {
+    margin: 17px auto 18px;
+    padding: 18px 15px 16px;
+    border: 3px solid #76502a;
+    outline: 1px solid #b48245;
+    outline-offset: 3px;
+    background:
+        linear-gradient(180deg, #21170f 0%, #0d0907 100%);
+    box-shadow:
+        inset 0 0 18px rgba(0,0,0,.8),
+        0 8px 18px rgba(0,0,0,.8),
+        0 0 12px rgba(151,89,35,.22);
+}
+
+.cassette-window {
+    position: relative;
+    margin: 0 auto 15px;
+    padding: 16px 10px;
+    border: 2px solid #60401f;
+    background: #090705;
+    box-shadow: inset 0 0 14px rgba(0,0,0,.95);
+}
+
+.cassette-reels {
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+    margin-bottom: 10px;
+}
+
+.cassette-reel {
+    width: 46px;
+    height: 46px;
+    border: 5px double #a8763c;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 6px #17100b;
+}
+
+.cassette-label {
+    color: #c99b5e;
+    font-size: .82rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.playlist-button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #21150d;
+    background: linear-gradient(180deg, #d7b77f, #a97b42);
+    border: 1px solid #e0c18b;
+    outline: 1px solid #65421f;
+    outline-offset: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,.65);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.playlist-button:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 5px 10px rgba(0,0,0,.75),
+        0 0 10px rgba(190,132,64,.3);
+}
+
+.boombox-note {
+    margin: 15px 0 0 !important;
+    padding-top: 14px;
+    border-top: 1px solid rgba(132, 87, 42, .28);
+    color: #cdb083 !important;
+    font-style: italic;
+    line-height: 1.55 !important;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    position: relative;
+
+    margin-top: 35px;
+    padding: 38px 20px;
+
+    text-align: center;
+
+    color: #c49450;
+    font-style: italic;
+    font-size: 1.1rem;
+
+    background:
+        linear-gradient(
+            180deg,
+            #100b07,
+            #060504
+        );
+
+    border-top: 2px solid #5e3d1d;
+
+    box-shadow:
+        inset 0 8px 20px rgba(0,0,0,.6);
+}
+
+footer::before {
+    content: "✦  ◇  ✦";
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #795025;
+    font-style: normal;
+    letter-spacing: 6px;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about,
+    .currently,
+    .spud,
+    .music,
+    .journal,
+    .projects,
+    .gallery,
+    .guestbook {
+        grid-column: auto;
+    }
+
+    .journal,
+    .gallery {
+        grid-column: 1 / 3;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 10px 6px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: .9rem;
+    }
+
+    .page {
+        padding: 0 14px 25px;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .panel {
+        margin-bottom: 25px;
+    }
+
+    .journal,
+    .gallery {
+        grid-column: auto;
+    }
+}
+    
+/* ========================================
+   GUESTBOOK
+======================================== */
+
+.guestbook-intro {
+    margin: 2px 0 14px;
+    text-align: center;
+    font-style: italic;
+    color: #d7bd91;
+    line-height: 1.5;
+}
+
+.guestbook-frame {
+    width: 100%;
+    height: 420px;
+    border: 1px solid #8c5b2b;
+    box-sizing: border-box;
+    background: #100b08;
+}
+
+.guestbook-note {
+    margin: 12px 0 0;
+    text-align: center;
+    color: #9c7747;
+    font-size: .88rem;
+}
+
+
+/* ========================================
+   GALLERY PREVIEW
+======================================== */
+.gallery-intro { margin:2px 0 14px; color:#d7bd91; letter-spacing:.04em; font-size:.92rem; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:0 0 14px; }
+.gallery-thumb { display:block; aspect-ratio:4/3; overflow:hidden; border:1px solid #8c5b2b; background:#090705; }
+.gallery-thumb img { width:100%; height:100%; display:block; object-fit:cover; transition:transform .25s ease,opacity .25s ease; }
+.gallery-thumb:hover img { transform:scale(1.035); opacity:.9; }
+.gallery-thumb:nth-child(2), .gallery-thumb:nth-child(5) { transform:translateY(5px); }
+.gallery-footer { text-align:center; margin-top:12px; }
+.gallery-link { color:#e6bc78; font-weight:bold; text-decoration:none; border-bottom:1px solid rgba(230,188,120,.45); }
+.gallery-link:hover { color:#fff1c7; border-bottom-color:#fff1c7; }
+@media (max-width:700px) {
+  .gallery-grid { grid-template-columns:repeat(2,1fr); }
+  .gallery-thumb:nth-child(2), .gallery-thumb:nth-child(5) { transform:none; }
+}
+
+
+/* ========================================
+   WORKSHOP PAGE
+======================================== */
+.workshop-page {
+    max-width: 1450px;
+    margin: 30px auto;
+    padding: 0 25px 30px;
+}
+
+.workshop-hero {
+    margin-bottom: 22px;
+}
+
+.workshop-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.workshop-intro strong {
+    color: #e8c58f;
+}
+
+.workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.workshop-section {
+    min-height: 0;
+}
+
+.workshop-section h3 {
+    margin: 0 0 14px;
+    padding-bottom: 8px;
+    color: #e8c58f;
+    border-bottom: 1px solid rgba(140,91,43,.55);
+    font-size: 1.25rem;
+}
+
+.workshop-item {
+    padding: 12px 4px 14px;
+    border-bottom: 1px solid rgba(132,87,42,.28);
+}
+
+.workshop-item:last-child {
+    border-bottom: none;
+}
+
+.workshop-item strong {
+    color: #e6bc78;
+}
+
+.workshop-item p {
+    margin: 6px 0 0;
+}
+
+.workshop-note {
+    margin-top: 18px !important;
+    padding-top: 14px;
+    border-top: 1px solid rgba(132,87,42,.28);
+    text-align: center;
+    font-style: italic;
+    color: #cdb083 !important;
+}
+
+.workshop-back {
+    text-align: center;
+    margin-top: 28px;
+}
+
+.workshop-back a {
+    color: #e6bc78;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(230,188,120,.45);
+}
+
+.workshop-back a:hover {
+    color: #fff1c7;
+    border-bottom-color: #fff1c7;
+}
+
+@media (max-width: 800px) {
+    .workshop-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="banner.png" alt="Brenda's personal website banner" class="banner">
+</header>
+
+<nav>
+        <a href="index.html">Home</a>
+        <a href="brenda-land.html">The Journal</a>
+        <a href="#">The Library</a>
+        <a href="workshop.html">The Workshop</a>
+        <a href="#">Curiosity Cabinet</a>
+        <a href="#">Boom Box</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#">Notice Board</a>
+    </nav>
+
+<main class="workshop-page">
+
+    <section class="panel workshop-hero">
+        <h2>Welcome to the Workshop</h2>
+        <div class="workshop-intro">
+            <p><strong>There is paint on something, yarn tangled around something else,
+            and at least one project I absolutely did not need to start.</strong></p>
+            <p>This is what's currently occupying my workbench.</p>
+        </div>
+    </section>
+
+    <div class="workshop-grid">
+
+        <section class="panel workshop-section">
+            <h2>🐎 On the Painting Table</h2>
+
+            <div class="workshop-item">
+                <h3>Verdigris Appy Bouncer</h3>
+                <p>Currently occupying valuable table space and demanding attention.</p>
+            </div>
+
+            <div class="workshop-item">
+                <h3>Nightmare — SM Twister</h3>
+                <p>Because apparently a normal horse was never an option.</p>
+            </div>
+
+            <div class="workshop-item">
+                <h3>Squashling — SM Pony</h3>
+                <p>Tiny seasonal vegetable-adjacent chaos in progress.</p>
+            </div>
+        </section>
+
+        <section class="panel workshop-section">
+            <h2>🧶 On the Hook</h2>
+
+            <div class="workshop-item">
+                <h3>The Giant Blanket</h3>
+                <p>One row takes approximately forever. Progress is measured in determination
+                and questionable life choices.</p>
+            </div>
+
+            <p class="workshop-note">Yarn has never respected boundaries.</p>
+        </section>
+
+        <section class="panel workshop-section">
+            <h2>🧪 Current Experiments</h2>
+
+            <div class="workshop-item">
+                <h3>Whatever seemed like a good idea at the time</h3>
+                <p>Paint tests, materials, techniques, half-formed plans, and the occasional
+                project that exists mostly because I wanted to see if I could.</p>
+            </div>
+        </section>
+
+        <section class="panel workshop-section">
+            <h2>📦 Waiting in the Wings</h2>
+
+            <div class="workshop-item">
+                <h3>The Queue</h3>
+                <p>Projects waiting patiently, impatiently, or ominously for their turn on the table.</p>
+            </div>
+
+            <p class="workshop-note">There is always a queue. There will always be a queue.</p>
+        </section>
+
+    </div>
+
+    <div class="workshop-back">
+        <a href="index.html">← Back to Brenda's Corner</a>
+    </div>
+
+</main>
+
+<footer>
+    Not all who wander are lost. Some are just on a side quest.
+</footer>
+
+</body>
+</html>
